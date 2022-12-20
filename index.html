@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style1.css">
+    <title>Message cryptography</title>
+</head>
+<body>
+    <div class="slider-thumb"></div>
+    
+    <div class="form">
+
+        <div class="header">
+            <h1>Message cryptography</h1>
+            
+        </div>
+
+        <form id="Form">
+            <div class="text_field">
+                <textarea name="text" id="text" cols="35" rows="5" placeholder="Enter the text you want to Encrypt or Decrypt"></textarea>
+            </div>
+            <br>
+            <div class="enc_dec">
+                <label for="key">Key</label>
+                <input type="text" name="key" id="key" placeholder="Encryption or Decryption key">
+                <select name="crypto" id="crypto">
+                    <option value="Encrypt">Encrypt</option>
+                    <option value="Decrypt">Decrypt</option>
+                </select>
+            </div>
+            <br>
+
+            <div class="alg">
+                <label >Select Algorithm</label>
+                <select name="algorithm" id="algorithm">
+                    <option value="AES">AES</option>
+                    <option value="3_DES">Triple DES</option>
+                    <option value="OTP">OTP</option>
+                </select>
+            </div>
+
+            <button class="submit_button" type="submit" id="submit">Encrypt</button>
+            
+        </form>
+
+        <div class="res">
+            <div class="result">
+                <textarea cols="25" rows="5"  id="result" placeholder="Result"></textarea>
+            </div>
+            <button class="copy_button" id="copy" disabled>Copy</button>
+            <p id="warning"></p>
+        </div>
+
+    </div>
+    <script src="./onetimepad.js"></script>
+    <script src="./crypto-js.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
